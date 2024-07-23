@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.left{
+	height:100vh;
+	float:left;
+	width: 24%;
+}
+.kontent{
+	padding:12px;
+	height:100vh;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+/*	box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.2);*/
+	float: left;
+	width:50%;
+}
+.right{
+	height:100vh;
+	float:right;
+	width: 24%;
+}
