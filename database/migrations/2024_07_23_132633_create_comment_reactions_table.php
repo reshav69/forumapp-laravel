@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('comment_reactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignKey('comment_id')->constrained()->cascadeOnDelete();
-            $table->foreignKey('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('comment_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->enum('reaction',['liked','disliked']);
-            
+            $table->timestamps();
             
         });
     }

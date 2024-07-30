@@ -20,6 +20,12 @@ Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login',[AuthController::class,'authenticate']);
 
 Route::post('/logout',[AuthController::class,'logout'])->name('logout');
+
+//like dislike controller
+Route::post('/forums/{forum}/comments/{comment}/like', [CommentController::class, 'like'])->name('forums.comments.like')->middleware('auth');
+Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::class, 'dislike'])->name('forums.comments.dislike')->middleware('auth');
+
+
 //todo
 //user authentication --
     //associate forum with user --
@@ -31,7 +37,8 @@ Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 //forum edit/delete
     //image upload
 //comment like dislike
-    //track user likes/dislikes
+    //track user likes/dislikes --
+    //remove like dislike
 //comment edit/delete
 //show all post made by a users
 

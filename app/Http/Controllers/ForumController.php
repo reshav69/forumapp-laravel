@@ -49,8 +49,8 @@ class ForumController extends Controller
      */
     public function show(Forum $forum)
     {
-
-        return view('forum.show',['forum'=>$forum]);
+        $commentCount = $forum->comments()->count();
+        return view('forum.show',['forum'=>$forum,'commentCount'=>$commentCount]);
     }
 
     /**

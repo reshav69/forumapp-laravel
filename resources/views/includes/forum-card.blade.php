@@ -9,7 +9,7 @@
 
 </div>
 <div>
-	<span>comments: {{ $forum->comments_count }}</span>&emsp;
+	<span>comments: {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
 	<a href="{{ route('forums.show',$forum->id) }}">View</a>
 
 

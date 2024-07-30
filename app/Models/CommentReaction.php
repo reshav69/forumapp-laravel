@@ -15,7 +15,7 @@ class CommentReaction extends Model
     protected $fillable = [
         'comment_id',
         'user_id',
-        'reacion'
+        'reaction'
     ];
 
     public function comment(){

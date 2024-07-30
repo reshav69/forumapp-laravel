@@ -21,4 +21,34 @@ class CommentController extends Controller
 
 
     }
+
+    public function like($forumId,Comment $comment){
+        $this->addReaction($comment,'liked');
+        return back();
+    }
+
+    public function dislike($forumId,Comment $comment){
+        $this->addReaction($comment,'disliked');
+        return back();
+    }
+
+    function addReaction(Comment $comment, $reactionType){
+        $reaction = $comment->reactions()->where('user_id',auth()->id())->first();
+        if($reaction){
+            //if same reaction then delete reaction, handle unlike
+            if ($reaction->reaction == $reactionType)
+                $reaction->delete();
+            else
+                $reaction->reaction = $reactionType;
+                $reaction->save();
+        }
+        else{
+            $comment->reactions()->create([
+                'user_id' => auth()->id(),
+                'reaction' => $reactionType,
+            ]);
+        }
+
+
+    }
 }
