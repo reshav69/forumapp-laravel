@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', [ForumController::class,'index'])->name('root');
 
@@ -25,8 +26,11 @@ Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 Route::post('/forums/{forum}/comments/{comment}/like', [CommentController::class, 'like'])->name('forums.comments.like')->middleware('auth');
 Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::class, 'dislike'])->name('forums.comments.dislike')->middleware('auth');
 
+//profile
+Route::get('/profile/{user}', [ProfileController::class, 'show'])->middleware('auth')->name('profile.show');
 
 //todo
+//ADMIN
 //user authentication --
     //associate forum with user --
     //associate comment with user --
@@ -40,7 +44,9 @@ Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::cl
     //track user likes/dislikes --
     //remove like dislike
 //comment edit/delete
-//show all post made by a users
+//show all post made by a users --
+//search post
+
 
 //...
 //profile edit
@@ -48,3 +54,4 @@ Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::cl
 //notifications
 //recently viewed
 //replies
+//bookmarks

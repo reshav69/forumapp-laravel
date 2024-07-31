@@ -10,7 +10,7 @@
 			<li style="float:right"><a href="{{route('register')}}">Register</a></li>
 		@endguest
 		@auth
-			<li style="float:right"><a href="#name">{{auth()->user()->name}}</a></li>
+			<li style="float:right"><a href="{{route('profile.show',auth()->user())}}">{{auth()->user()->name}}</a></li>
 			<li style="float:right">
 				<form action="{{route('logout')}}" method="post">
 					@csrf

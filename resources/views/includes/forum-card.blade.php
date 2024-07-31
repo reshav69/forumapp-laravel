@@ -9,7 +9,10 @@
 
 </div>
 <div>
-	<span>comments: {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
+	{{-- show message  icon --}}
+	<span class="dialog-icon">aaa</span>
+	{{-- //show count --}}
+	<span> {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
 	<a href="{{ route('forums.show',$forum->id) }}">View</a>
 
 
