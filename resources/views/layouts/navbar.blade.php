@@ -4,6 +4,8 @@
 		<li><a href="{{route('root')}}">Home</a></li>
 		<li><a href="#news">News</a></li>
 		<li><a href="#contact">Contact</a></li>
+
+
 		<li style="float:right"><a href="{{route('forums.create')}}">Create</a></li>
 		@guest
 			<li style="float:right"><a href="{{route('login')}}">Login</a></li>
@@ -19,5 +21,6 @@
 				</form>
 			</li>
 		@endauth
+		@include("layouts.search-bar")
 	</ul>
 </nav>

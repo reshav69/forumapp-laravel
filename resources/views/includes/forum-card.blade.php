@@ -1,5 +1,5 @@
 <div>
-	<i>{{$forum->user->name}} </i>&backsim;
+	<i><a href="{{route('profile.show',$forum->user->id)}}">{{$forum->user->name}} </a></i>&backsim;
 	<i>{{$forum->created_at}}</i>
 	<h2>{{ $forum->title }}</h2>
 	<br>
@@ -14,8 +14,10 @@
 	{{-- //show count --}}
 	<span> {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
 
-	<span>comments: {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
-	<a href="{{ route('forums.show',$forum->id) }}">View</a>
+	{{-- <span>comments: {{ $forum->comments_count ?? $commentCount }}</span>&emsp; --}}
+	<a style="font-size: 16pt;text-decoration: none" href="{{ route('forums.show',$forum->id) }}">
+		&#x1F441;&#x1F441;
+	</a>
 
 
 	{{-- <form action="{{ route('ideas.destroy',$idea->id) }}" method="post">

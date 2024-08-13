@@ -39,3 +39,27 @@
   font-size: 12pt;
   color: indianred;
 }
+
+.search-body{
+  max-width: 25%;
+  padding-top:6px;
+  margin: 0 auto;
+  display: block;
+
+}
+.search-body input{
+  width: 84%;
+  border: none;
+  display:inline;
+  margin:0px -4px 0px 0px;
+  height: 30px;
+  padding: 2px;
+}
+
+.searchBtn{
+  display: inline;
+  border: none;
+  background-color: white;
+  margin:0px 0px 0px 0px;
+  height: 34px;
+}

@@ -8,6 +8,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', [ForumController::class,'index'])->name('root');
+Route::get('/search', [ForumController::class,'search'])->name('search');
 
 Route::resource('forums',ForumController::class)->except('index')->middleware('auth');
 
