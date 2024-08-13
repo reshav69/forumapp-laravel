@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.left{
+	height:100vh;
+	float:left;
+	width: 24%;
+}
+.kontent{
+	padding:12px;
+	height:100vh;
+	border: 1px solid black;
+/*	border-right: 1px solid black;*/
+/*	box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.2);*/
+	box-sizing: border-box;
+	float: left;
+	width:47vw;
+}
+.right{
+	height:100vh;
+	float:right;
+	width: 24%;
+}
+
+.likeBtn,.dislikeBtn{
+	padding: 1px;
+	background-color: teal;
+
+}
+.likeBtn:hover{
+	background-color: green;
+}
+.dislikeBtn:hover{
+	background-color: red;
+}
+.lkdslk{
+	display: flex;
+}
+.dialog-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
