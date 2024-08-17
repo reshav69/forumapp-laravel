@@ -8,6 +8,7 @@
 	width: 24%;
 }
 .kontent{
+	overflow: hidden;
 	padding:12px;
 	min-height:100vh;
 	border: 1px solid black;

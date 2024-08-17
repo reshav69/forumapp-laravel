@@ -6,6 +6,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', [ForumController::class,'index'])->name('root');
 Route::get('/search', [ForumController::class,'search'])->name('search');
@@ -30,6 +31,9 @@ Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::cl
 
 //profile
 Route::get('/profile/{user}', [ProfileController::class, 'show'])->middleware('auth')->name('profile.show');
+
+//category
+Route::get('/category/{category}', [CategoryController::class, 'show'])->name('category.show');
 
 //todo --?done
 //ADMIN

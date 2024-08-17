@@ -16,11 +16,13 @@ class ForumController extends Controller
         // $forums = Forum::all();
         $forums = Forum::withCount('comments')->get();
         $searchterm = request()->get('search','');
+
+        $cat = Category::all();
         // dd($forums);
 
         // $forums = $forums->where('title','like','%' . $searchterm .'%');
 
-        return view('index',['forums'=>$forums]);
+        return view('index',['forums'=>$forums,'categories'=>$cat]);
     }
 
     public function search(Request $request){

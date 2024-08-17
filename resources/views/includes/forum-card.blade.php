@@ -1,4 +1,5 @@
 <div>
+	<p>{{$forum->category->category_name}}</p>
 	<i><a href="{{route('profile.show',$forum->user->id)}}">{{$forum->user->name}} </a></i>&backsim;
 	<i>{{$forum->created_at}}</i>
 	<h2>{{ $forum->title }}</h2>

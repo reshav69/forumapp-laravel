@@ -2,11 +2,17 @@
 @section('content')
 
 <div class="left">
-    @if(session()->has('success'))
-        <h2>{{session('success')}}</h2>
+    @if($categories)
+        @foreach($categories as $category)
+        <li><a href="{{route('category.show',$category->id)}}">{{$category->category_name}}</a></li>
+        
+        @endforeach
     @endif
 </div>
 <div class="right">
+    @if(session()->has('success'))
+        <h2>{{session('success')}}</h2>
+    @endif
     
 </div>
 <div class="kontent">

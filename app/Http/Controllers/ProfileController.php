@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Models\Forum;
 use App\Models\User;
-use App\Models\CommentController;
 
 class ProfileController extends Controller
 {
