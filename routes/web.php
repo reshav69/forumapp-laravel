@@ -31,7 +31,7 @@ Route::post('/forums/{forum}/comments/{comment}/dislike', [CommentController::cl
 //profile
 Route::get('/profile/{user}', [ProfileController::class, 'show'])->middleware('auth')->name('profile.show');
 
-//todo
+//todo --?done
 //ADMIN
 //user authentication --
     //associate forum with user --
@@ -39,6 +39,8 @@ Route::get('/profile/{user}', [ProfileController::class, 'show'])->middleware('a
 
 //tags,categories
     //add tags,categories in forums
+        //categories
+        //tags
     //filter by category and tags
 //forum edit/delete
     //image upload
@@ -47,7 +49,7 @@ Route::get('/profile/{user}', [ProfileController::class, 'show'])->middleware('a
     //remove like dislike
 //comment edit/delete
 //show all post made by a users --
-//search post
+//search post --
 
 
 //...

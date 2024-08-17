@@ -14,7 +14,8 @@ class Forum extends Model
      protected $fillable = [
         'title',
         'description',
-        'user_id'
+        'user_id',
+        'category_id'
     ];
 
     public function comments(){

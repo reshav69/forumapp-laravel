@@ -9,7 +9,7 @@
 }
 .kontent{
 	padding:12px;
-	height:100vh;
+	min-height:100vh;
 	border: 1px solid black;
 /*	border-right: 1px solid black;*/
 /*	box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.2);*/
@@ -40,6 +40,6 @@
 .dialog-icon {
     width: 24px;
     height: 24px;
-    background-color: #000;
+    background-color: black;
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }

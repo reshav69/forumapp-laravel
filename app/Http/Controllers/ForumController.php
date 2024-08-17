@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Forum;
+use App\Models\Category;
 
 class ForumController extends Controller
 {
@@ -34,7 +35,8 @@ class ForumController extends Controller
      */
     public function create()
     {
-        return view('forum.create');
+        $cat = Category::all();
+        return view('forum.create',['categories'=>$cat]);
     }
 
     /**
@@ -45,6 +47,7 @@ class ForumController extends Controller
         $validated =$request->validate([
             'title'=> 'required|max:255',
             'description'=> 'required|max:255',
+            'category_id'=>'required'
             
         ]);
 
