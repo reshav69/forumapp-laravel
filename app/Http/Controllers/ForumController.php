@@ -28,8 +28,9 @@ class ForumController extends Controller
     public function search(Request $request){
         $search = $request->input('search');
         $results = Forum::where('title', 'like', "%$search%")->withCount('comments')->get();
+        $cat = Category::all();
 
-        return view('index',['forums'=>$results]);
+        return view('index',['forums'=>$results,'categories'=>$cat]);
     }
 
     /**

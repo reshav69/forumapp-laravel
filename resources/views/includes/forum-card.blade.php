@@ -1,25 +1,37 @@
-<div>
-	<p>{{$forum->category->category_name}}</p>
+<article class="card">
+	<header>
+		<i><a href="{{route('profile.show',$forum->user->id)}}">{{$forum->user->name}} </a></i>&backsim;
+		<i>{{$forum->created_at}}</i>
+		<h2>{{$forum->title}}</h2>
+		<a class="bd-primary round text-small">{{$forum->category->category_name}}</a>
+		<a class="bg-light round">Tag</a>
+
+	</header>
+	<br>
+
+	<p>{{ $forum->description }}</p>
+
+	<footer>
+		<hr>
+		<i class="dialog-icon">---</i>
+		<span> {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
+		<a href="{{ route('forums.show',$forum->id) }}">&#x1F441;&#x1F441;</a>
+
+	</footer>
+
+</article>
+
+{{-- <div class="uinfo">
 	<i><a href="{{route('profile.show',$forum->user->id)}}">{{$forum->user->name}} </a></i>&backsim;
 	<i>{{$forum->created_at}}</i>
 	<h2>{{ $forum->title }}</h2>
+	<span class="catname">{{$forum->category->category_name}}</span>
 	<br>
-	<p>{{ $forum->description }}</p>
+	<p class="fdesc">{{ $forum->description }}</p>
 	<br>
 
 
-</div>
-<div>
-	{{-- show message  icon --}}
-	<span class="dialog-icon">aaa</span>
-	{{-- //show count --}}
-	<span> {{ $forum->comments_count ?? $commentCount }}</span>&emsp;
-
-	{{-- <span>comments: {{ $forum->comments_count ?? $commentCount }}</span>&emsp; --}}
-	<a style="font-size: 16pt;text-decoration: none" href="{{ route('forums.show',$forum->id) }}">
-		&#x1F441;&#x1F441;
-	</a>
-
+</div> --}}
 
 	{{-- <form action="{{ route('ideas.destroy',$idea->id) }}" method="post">
 		@csrf
@@ -31,5 +43,3 @@
 		@endauth
 
 	</form> --}}
-</div>
-<hr>

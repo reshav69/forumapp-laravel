@@ -1,7 +1,5 @@
-<div class="search-body">
-    <form action="{{route('search')}}" method="get">
 
-        <input name="search" placeholder="..." class="search" type="text" id="search" value="{{request('search','')}}">
-        <button class="searchBtn">&#128269;</button>
-    </form>
-</div>
+<form action=" {{route('search')}}" class="is-center">
+    <input name="search" placeholder="..." class="search" type="text" id="search" value="{{request('search','')}}">
+    <button class="button icon-only outline is-marginless"> &#128269;</button>
+</form>
