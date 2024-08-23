@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="{{asset('css/chota.css')}}">
 </head>
-<body>
+<body class="dark">
 	<div class="main-container">
 		<div class="header">
 			<header>

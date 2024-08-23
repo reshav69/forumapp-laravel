@@ -10,7 +10,7 @@
 		@include("layouts.search-bar")
 	</div>
 	<div class="nav-right">
-		<a href="{{route('forums.create')}}">Create</a>
+		<a href="{{route('forums.create')}}">&#10133; Create</a>
 
 		@guest
 		<a href="{{route('login')}}">Login</a>
@@ -18,11 +18,11 @@
 		@endguest
 
 		@auth
-		<a href="{{route('profile.show',auth()->user())}}">{{auth()->user()->name}}</a>
+		<a class="bg-primary text-white" href="{{route('profile.show',auth()->user())}}">{{auth()->user()->name}}</a>
 
-		<form action="{{route('logout')}}" method="post">
+		<form action="{{route('logout')}}" method="post" class="is-center">
 			@csrf
-			<button type="submit" class="">Logout</button>
+			<button class="button clear text-error" type="submit" class="">Logout</button>
 
 		</form>
 		@endauth

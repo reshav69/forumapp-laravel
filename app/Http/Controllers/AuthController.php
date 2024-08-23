@@ -44,7 +44,7 @@ class AuthController extends Controller
         }
 
         return redirect()->route('login')->withErrors([
-            'email'=>'User with that email doesnt exist', 
+            'email'=>'User with that email doesnt exist',
         ]);
     }
 
