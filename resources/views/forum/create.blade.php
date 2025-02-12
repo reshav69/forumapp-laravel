@@ -29,12 +29,7 @@
 							@endif
 						</select>
 					</div>
-					{{-- <div class="col">
-
-						<select class="is-right">
-							<option value="">Select a Tag</option>
-						</select>
-					</div> --}}
+					
 				</div>
 				<hr>
 				<input type="submit" value="create">

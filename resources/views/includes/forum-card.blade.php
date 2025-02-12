@@ -3,8 +3,9 @@
 		<i><a href="{{route('profile.show',$forum->user->id)}}">{{$forum->user->name}} </a></i>&backsim;
 		<i>{{$forum->created_at}}</i>
 		<h2>{{$forum->title}}</h2>
-		<a class="bd-primary round text-small">{{$forum->category->category_name}}</a>
-		<a class="bg-light round">Tag</a>
+		<a class="bd-primary round text-small">
+			{{$forum->category->category_name}}
+		</a>
 
 	</header>
 	<br>

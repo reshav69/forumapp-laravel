@@ -32,15 +32,19 @@ class CommentController extends Controller
         return back();
     }
 
-    function addReaction(Comment $comment, $reactionType){
+    public function addReaction(Comment $comment, $reactionType){
         $reaction = $comment->reactions()->where('user_id',auth()->id())->first();
         if($reaction){
             //if same reaction then delete reaction, handle unlike(doesnt work)
-            if ($reaction->reaction === $reactionType)
+            if ($reaction->reaction === $reactionType){
+                
                 $reaction->delete();
-            else
+            }
+            else{
                 $reaction->reaction = $reactionType;
                 $reaction->save();
+
+            }
         }
         else{
             $comment->reactions()->create([

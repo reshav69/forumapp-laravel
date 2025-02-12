@@ -55,10 +55,13 @@ class ForumController extends Controller
         ]);
 
         $validated['user_id'] = auth()->id();
+        if (Forum::create($validated)) {
 
-        Forum::create($validated);
+            return redirect()->route('root')->with("success","New post added");
+        }
+        
 
-        return redirect('/');  
+        return redirect()->route('root')->with('error','Some error occured, not added');  
     }
 
     /**

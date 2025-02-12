@@ -43,7 +43,7 @@ Route::get('/category/{category}', [CategoryController::class, 'show'])->name('c
 
 //tags,categories
     //add tags,categories in forums
-        //categories
+        //categories --
         //tags
     //filter by category and tags
 //forum edit/delete
